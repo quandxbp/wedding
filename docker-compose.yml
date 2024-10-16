@@ -1,8 +1,13 @@
 version: '3.8'
+
 services:
-  web:
-    build: .
-    ports:
-     - "8000:80"
+  fastapi:
+    image: tiangolo/uvicorn-gunicorn-fastapi:python3.9
+    container_name: fastapi_app
     volumes:
-     - .:/app
+      - ./app:/app  # Mount the app directory
+    ports:
+      - "8000:80"  # Map host port 8000 to container port 80
+    environment:
+      - MODULE_NAME=main  # The name of your FastAPI app file (without .py)
+    restart: always
