@@ -14,7 +14,7 @@ async def thiep_moi(request: Request):
     # Access the "guest" query parameter
     guest = request.query_params.get("g", "Khách mời")
     if "_" in guest:
-        guest.replace("_", " ") 
+        guest = guest.replace("_", " ") 
     print(f"Guest name: {guest}")
 
     # Render the HTML file with the guest name
@@ -25,7 +25,7 @@ async def thiep_moi_2(request: Request):
     # Access the "guest" query parameter
     guest = request.query_params.get("g", "Khách mời")
     if "_" in guest:
-        guest.replace("_", " ") 
+        guest = guest.replace("_", " ") 
     print(f"Guest name: {guest}")
 
     # Render the HTML file with the guest name
