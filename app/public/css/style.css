@@ -4259,13 +4259,34 @@ a:focus {
   }
 }
 
+@keyframes enter-animation {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .white-bg {
   background-color: white !important;
 }
 
 .green-border {
-  border: 1px solid #5e9a8e;;
+  border: 1px solid #5e9a8e;
   border-radius: 25px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .getting-there-section {
+    animation: enter-animation 0.8s 1;
+  }
+
+  .story-section {
+    animation: enter-animation 0.8s 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map 

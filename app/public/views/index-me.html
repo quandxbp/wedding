@@ -71,7 +71,7 @@
     <div class="page-wrapper">
 
         <!-- start preloader -->
-        <div class="preloader" style="dxisplay: none;">
+        <div class="preloader" style="display: none;">
             <div class="inner">
                 <span class="icon"><i class="fi flaticon-two"></i></span>
             </div>
@@ -161,69 +161,66 @@
         </header> -->
         <!-- end of header -->
 
-        <section class="getting-there-section section-padding white-bg">
-            <div class="container">
-                <div class="calendar row ml-3 mr-3">
-                    <div class="col rightCol col-12">
-                        <div class="content">
-                            <h2 class="title text-center">Wedding Announcement</h2>
-                            <ul class="months">
-                                <li><a href="#" title="Jan" data-value="1">Jan</a></li>
-                                <li><a href="#" title="Feb" data-value="2">Feb</a></li>
-                                <li><a href="#" title="Mar" data-value="3">Mar</a></li>
-                                <li><a href="#" title="Apr" data-value="4">Apr</a></li>
-                                <li><a href="#" title="May" data-value="5">May</a></li>
-                                <li><a href="#" title="Jun" data-value="6">Jun</a></li>
-                                <li><a href="#" title="Jul" data-value="7">Jul</a></li>
-                                <li><a href="#" title="Aug" data-value="8">Aug</a></li>
-                                <li><a href="#" title="Sep" data-value="9" >Sep</a></li>
-                                <li><a href="#" title="Oct" data-value="10">Oct</a></li>
-                                <li><a href="#" title="Nov" data-value="11" class="selected">Nov</a></li>
-                                <li><a href="#" title="Dec" data-value="12">Dec</a></li>
-                            </ul>
-                            <div class="clearfix"></div>
-                            <ul class="weekday">
-                                <li><a href="#" title="Mon" data-value="1">Mon</a></li>
-                                <li><a href="#" title="Tue" data-value="2">Tue</a></li>
-                                <li><a href="#" title="Wed" data-value="3">Wed</a></li>
-                                <li><a href="#" title="Thu" data-value="4">Thu</a></li>
-                                <li><a href="#" title="Fri" data-value="5">Fri</a></li>
-                                <li><a href="#" title="Say" data-value="6" class="selected">Sat</a></li>
-                                <li><a href="#" title="Sun" data-value="7">Sun</a></li>
-                            </ul>
-                            <div class="clearfix"></div>
-                            <ul class="days">
-                                <script>
-                                    for( var _i = -3; _i <= 31; _i += 1 ){
-                                        var _addClass = '';
-                                        if( _i === 2 ){ _addClass = ' class="selected"'; }
-                                        
-                                        switch( _i ){
-                                            case 3:
-                                            case 10:
-                                            case 17:
-                                            case 24:
-                                                _addClass = ' class="event"';
-                                            break;
-                                        }
-                                        if (_i >= 1 && _i < 31) {
-                                            document.write( '<li><a href="#" title="'+_i+'" data-value="'+_i+'"'+_addClass+'>'+_i+'</a></li>' );
-                                        } else {
-                                            document.write( '<li><a href="#" title="'+_i+'" data-value="'+_i+'"'+_addClass+'></a></li>' );
-                                        }
-                                        
+        <section class="getting-there-section section-padding white-bg" style="visibility: visible; animation-duration: 1s; animation-name: slideInUp;">
+            <div class="calendar row ml-3 mr-3">
+                <div class="col rightCol col-12">
+                    <div class="content">
+                        <h2 class="title text-center">Wedding Announcement</h2>
+                        <ul class="months">
+                            <li><a href="#" title="Jan" data-value="1">Jan</a></li>
+                            <li><a href="#" title="Feb" data-value="2">Feb</a></li>
+                            <li><a href="#" title="Mar" data-value="3">Mar</a></li>
+                            <li><a href="#" title="Apr" data-value="4">Apr</a></li>
+                            <li><a href="#" title="May" data-value="5">May</a></li>
+                            <li><a href="#" title="Jun" data-value="6">Jun</a></li>
+                            <li><a href="#" title="Jul" data-value="7">Jul</a></li>
+                            <li><a href="#" title="Aug" data-value="8">Aug</a></li>
+                            <li><a href="#" title="Sep" data-value="9" >Sep</a></li>
+                            <li><a href="#" title="Oct" data-value="10">Oct</a></li>
+                            <li><a href="#" title="Nov" data-value="11" class="selected">Nov</a></li>
+                            <li><a href="#" title="Dec" data-value="12">Dec</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <ul class="weekday">
+                            <li><a href="#" title="Mon" data-value="1">Mon</a></li>
+                            <li><a href="#" title="Tue" data-value="2">Tue</a></li>
+                            <li><a href="#" title="Wed" data-value="3">Wed</a></li>
+                            <li><a href="#" title="Thu" data-value="4">Thu</a></li>
+                            <li><a href="#" title="Fri" data-value="5">Fri</a></li>
+                            <li><a href="#" title="Say" data-value="6" class="selected">Sat</a></li>
+                            <li><a href="#" title="Sun" data-value="7">Sun</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <ul class="days">
+                            <script>
+                                for( var _i = -3; _i <= 31; _i += 1 ){
+                                    var _addClass = '';
+                                    if( _i === 2 ){ _addClass = ' class="selected"'; }
+                                    
+                                    switch( _i ){
+                                        case 3:
+                                        case 10:
+                                        case 17:
+                                        case 24:
+                                            _addClass = ' class="event"';
+                                        break;
                                     }
-                                </script>
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
+                                    if (_i >= 1 && _i < 31) {
+                                        document.write( '<li><a href="#" title="'+_i+'" data-value="'+_i+'"'+_addClass+'>'+_i+'</a></li>' );
+                                    } else {
+                                        document.write( '<li><a href="#" title="'+_i+'" data-value="'+_i+'"'+_addClass+'></a></li>' );
+                                    }
+                                    
+                                }
+                            </script>
+                        </ul>
+                        <div class="clearfix"></div>
                     </div>
-        
-                    <div class="clearfix"></div>
-        
                 </div>
+    
+                <div class="clearfix"></div>
+    
             </div>
-
         </section>
 		
 
