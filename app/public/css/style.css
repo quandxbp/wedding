@@ -114,6 +114,11 @@ a:focus {
   text-align: left !important;
 }
 
+.break-line {
+  font-size: 44px !important; 
+  color: #813e0e !important; 
+}
+
 .fi:before {
   margin: 0;
 }
@@ -3600,9 +3605,18 @@ a:focus {
 --------------------------------------------------------------*/
 .getting-there-section {
   background-color: #5e9a8e;
+  color: white !important;
+}
+
+.name-highlight {
+  color: white !important;
+  font-family: "Great Vibes", cursive;
+  font-size: 40px !important;
 }
 
 .getting-there-section .content h3,
+.getting-there-section .content h2,
+.getting-there-section .content h1,
 .getting-there-section .content p {
   color: #fff;
 }
